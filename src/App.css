@@ -1,38 +1,125 @@
-.App {
-  text-align: center;
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2b2929;
+    color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {   
+    box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+    max-width: 300px;
+    margin: 20px auto;
+}
+ 
+
+/* form styles */
+form {  
+    background-color: #5c4a42;  
+    border: 1px solid #d8d6d6;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+/* input styles */
+form input[type="text"] {
+    background: none;    
+    padding: 0px 8px;
+    color: rgb(255, 255, 255);
+    display: block;
+    width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+/* Button styles */
+form button {
+    background-color: #3fe98685;
+    border: 0px;
+    border-radius: 8px;
+    padding: 5px 8px;
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div.task{
+    background-color: #868585;
+    border-radius: 10px;
+    padding: 5px 9px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    transition: opacity .5s linear;
+}
+
+div.task svg{
+    height: 15px;
+    margin-right: 4px;
+    fill: #3fe98685;
+    cursor: pointer;
+     
+}
+
+div.task.done {
+    opacity: 0.5;
+    padding: 5px;
+    
+}
+
+div.task-name, div.task form{
+    flex-grow: 1;
+}
+
+div.task span{
+    position: relative;
+    
+}
+
+div.task span:before{
+    content:'';
+    display: block;
+    height: 1px;
+    width: 0;
+    background-color: azure;
+    position: absolute;
+    top: 10px;
+    transition: width .15s linear;
+}
+
+div.task.done span:before{
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+    color: #3fe98685;
+}
+
+h2{
+    text-align: center;
+    
+}
+
+div.checkbox{
+    display: flex;
+    align-items: center;
+}
+button.trash{
+    background: none;
+    border: none;
+    display: flex;
+    cursor: pointer;
+
+}
+
+button.trash svg{
+    fill: #ffffff;
+    height: 14px;
+}
+
+div.task input{
+    border : 2px solid #555;
+    border-radius: 5px;
+    padding: 2px 4px
 }
